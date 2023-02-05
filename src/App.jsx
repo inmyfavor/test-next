@@ -13,7 +13,7 @@ const App = () => {
             </button>
             <button 
                 className='menuButton'
-                onClick={()=>navigate('/messageboard')}>
+                onClick={()=>navigate('/average')}>
                     Средние числа
             </button>
             <a 

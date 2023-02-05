@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
-import './MessageBoard.css'
+import './MessageBoard.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 const messages = [
   { id: 1, author: 'Автор', text: 'Сообщение' },
 ]
 
-const InputForm = () => {
+const TextareaForm = () => {
   const [author, setAuthor] = useState('');
-  const [message, setMessage] = useState('');
+  const [text, setText] = useState('');
   return (
     <div className='inputForm'>
-      <h7 className='formTitle'>Оставьте сообщение</h7>
+      <h7 className='title'>Оставьте сообщение</h7>
       <input
         placeholder='Автор'
-        className='authorInput'
+        className='input'
         value={author}
         onChange={(e)=>setAuthor(e.target.value)}/>
       <textarea
         placeholder='Сообщение'
-        className='textareaMessage'
-        value={message}
-        onChange={(e)=>setMessage(e.target.value)}/>
+        className='textarea'
+        value={text}
+        onChange={(e)=>setText(e.target.value)}/>
       <input 
         type='submit' 
         value='Разместить сообщение'
-        className='formSubmit'
-        disabled={author.trim()==='' || message.trim()===''}/>
+        className='submit'
+        disabled={author.trim()==='' || text.trim()===''}/>
     </div>
   );
 };
@@ -41,8 +42,8 @@ const Message = (props) => {
 
 const MessageBoard = () => {
   return (
-    <div className='board'>
-      <InputForm/>
+    <div className='page'>
+      <TextareaForm/>
       {messages.map(message => <Message key={'message'+message.id} {...message}/>)}
     </div>
   );

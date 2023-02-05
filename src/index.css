@@ -6,3 +6,73 @@ html, body {
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.inputForm, .message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid gray;
+    width: 50%;
+    border-radius: 16px;
+}
+
+.inputForm {
+    align-items: center;
+    padding: 20px;
+}
+
+.message {
+    border-radius: 16px;
+    padding: 10px 20px 10px 20px;
+}
+
+.input, .textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    outline: transparent;
+}
+
+.page {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.submit {
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid gray;
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+}
+
+.submit:hover {
+    background-color: black;
+    color: white;
+}
+
+.submit:disabled {
+    background-color: gray;
+    opacity: 0.3;
+    color: black;
+    cursor: default;
+}
+
+.messageText {
+    margin: 0;
+    font-size: 14px;
+}
