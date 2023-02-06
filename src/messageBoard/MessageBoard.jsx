@@ -1,7 +1,7 @@
 import React from 'react';
 import './MessageBoard.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { setAuthor, setText } from './slices/messageBoardSlice';
+import { setAuthor, setText } from '../slices/messageBoardSlice';
 
 const messages = [
   { id: 1, author: 'Автор', text: 'Сообщение' },

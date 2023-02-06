@@ -1,7 +1,7 @@
 import React from 'react';
 import './Average.css'
 import { useSelector, useDispatch } from 'react-redux';
-import { setNumber } from './slices/averageNumberSlice';
+import { setNumber } from '../slices/averageNumberSlice';
 
 function isValueCorrect(value) {
     if (value.trim()==='' || isNaN(Number(value))) {

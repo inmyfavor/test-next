@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Average from "./Average";
-import MessageBoard from "./MessageBoard";
+import Average from "./averageNumber/Average";
+import MessageBoard from "./messageBoard/MessageBoard";
 
 const AppRoutes = () => {
     return (
