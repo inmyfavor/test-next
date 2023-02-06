@@ -11,11 +11,13 @@ const messageBoardSlice = createSlice({
   reducers: {
     setAuthor: (state, action) => {
         state.author = action.payload;
-        return state.author;
+    },
+    setText: (state, action) => {
+        state.text = action.payload;
     },
   },
 });
 
-export const { setAuthor } = messageBoardSlice.actions;
+export const { setAuthor, setText } = messageBoardSlice.actions;
 
 export default messageBoardSlice.reducer;

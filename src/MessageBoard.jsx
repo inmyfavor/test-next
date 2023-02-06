@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './MessageBoard.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { setAuthor, setText } from './slices/messageBoardSlice';
 
 const messages = [
   { id: 1, author: 'Автор', text: 'Сообщение' },
 ]
 
 const TextareaForm = () => {
-  const [author, setAuthor] = useState('');
-  const [text, setText] = useState('');
+
+  const dispatch = useDispatch();
+
+  const author = useSelector((state) => state.messageBoard.author);
+  const text = useSelector((state) => state.messageBoard.text);
+
   return (
     <div className='inputForm'>
       <h7 className='title'>Оставьте сообщение</h7>
@@ -16,12 +21,12 @@ const TextareaForm = () => {
         placeholder='Автор'
         className='input'
         value={author}
-        onChange={(e)=>setAuthor(e.target.value)}/>
+        onChange={(e)=>dispatch(setAuthor(e.target.value))}/>
       <textarea
         placeholder='Сообщение'
         className='textarea'
         value={text}
-        onChange={(e)=>setText(e.target.value)}/>
+        onChange={(e)=>dispatch(setText(e.target.value))}/>
       <input 
         type='submit' 
         value='Разместить сообщение'
