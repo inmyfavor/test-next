@@ -5,7 +5,7 @@ import { setAuthor, setText } from '../slices/messageBoardSlice';
 
 const messages = [
   { id: 1, author: 'Автор', text: 'Сообщение' },
-]
+];
 
 const TextareaForm = () => {
 

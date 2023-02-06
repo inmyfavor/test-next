@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import './index.css'
 import store from './slices/index.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.hydrate(
   <React.StrictMode>
     <Provider store={store}>
-      <AppRoutes/>
+      <BrowserRouter>
+        <AppRoutes/>
+      </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

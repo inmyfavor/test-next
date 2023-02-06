@@ -1,8 +1,5 @@
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-    res.send('hello world')
-  });
-  
-app.listen(8000);
+require( 'ignore-styles' );
+// транспилируем на лету импорты
+require( '@babel/register')();
+// импортируем express-сервер
+require( './app.js' );

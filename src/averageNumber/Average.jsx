@@ -5,10 +5,10 @@ import { setNumber } from '../slices/averageNumberSlice';
 
 function isValueCorrect(value) {
     if (value.trim()==='' || isNaN(Number(value))) {
-        return true;
+        return true
     }
-    return false;
-}
+    return false
+};
 
 const Checkbox = (props) => {
     return (
